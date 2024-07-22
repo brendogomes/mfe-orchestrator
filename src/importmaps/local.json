@@ -1,5 +1,6 @@
 {
     "imports": {
-      "@mfe/root-config": "//localhost:8000/mfe-root-config.js"
+      "@mfe/root-config": "//localhost:8000/mfe-root-config.js",
+      "@mfe/sidebar": "//localhost:8001/mfe-sidebar.js"
     }
-}
+} 

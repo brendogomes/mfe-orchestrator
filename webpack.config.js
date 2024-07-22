@@ -1,6 +1,7 @@
 const { merge } = require("webpack-merge");
 const singleSpaDefaults = require("webpack-config-single-spa-ts");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = (webpackConfigEnv, argv) => {
   const orgName = "mfe";
@@ -23,6 +24,11 @@ module.exports = (webpackConfigEnv, argv) => {
           orgName,
         },
       }),
+      new CopyWebpackPlugin({
+        patterns: [
+          { from: 'src/importmaps', to: 'importmaps' } 
+        ]
+      })
     ],
   });
 };
