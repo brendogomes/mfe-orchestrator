@@ -13,7 +13,7 @@ const mfeApps = [
   },
   {
     name: '@mfe/dashboard',
-    activeWhen: location => location.pathname.startsWith('/'),
+    activeWhen: location => location.pathname.startsWith('/dashboard'),
     domElement: 'main'
   }
 ]
