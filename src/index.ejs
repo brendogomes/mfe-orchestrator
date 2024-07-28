@@ -17,10 +17,7 @@
   object-src 'none';
   ">
   <meta name="importmap-type" content="systemjs-importmap" />
-
-
   <script type="systemjs-importmap" src="./importmaps/dependencies.json"></script>
-
   <link rel="preload" href="https://cdn.jsdelivr.net/npm/single-spa@5.9.0/lib/system/single-spa.min.js" as="script" crossOrigin="anonymous">
 
   <% if (isLocal) { %>
@@ -34,7 +31,10 @@
         <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.3/dist/system.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.3/dist/extras/amd.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/systemjs@6.7.0/dist/extras/amd.min.js"></script>
-        <style>
+
+        <script type="module" src="http://localhost:8010/build/web-components.esm.js"></script>
+        <script nomodule src="http://localhost:8010/build/web-components.js"></script>
+        <style> 
           body {
             display: flex;
             margin: 0;
