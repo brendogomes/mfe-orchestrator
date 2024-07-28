@@ -8,8 +8,16 @@
   <title>Root Config</title>
   <script src="https://cdn.jsdelivr.net/npm/regenerator-runtime@0.13.7/runtime.min.js"></script>
   <meta http-equiv="Content-Security-Policy"
-    content="default-src 'self' https: localhost:*; script-src 'unsafe-inline' 'unsafe-eval' https: localhost:*; connect-src https: localhost:* ws://localhost:* ws://192.168.1.5:8003/; style-src 'unsafe-inline' https:; object-src 'none';">
+  content="
+  default-src 'self' https: localhost:*;
+  script-src 'unsafe-inline' 'unsafe-eval' https: localhost:*;
+  connect-src https: localhost:* ws://localhost:* ws://192.168.1.5:8003/;
+  style-src 'unsafe-inline' https: localhost:*;
+  style-src-elem 'unsafe-inline' https: localhost:*;
+  object-src 'none';
+  ">
   <meta name="importmap-type" content="systemjs-importmap" />
+
 
   <script type="systemjs-importmap" src="./importmaps/dependencies.json"></script>
 
@@ -30,6 +38,7 @@
           body {
             display: flex;
             margin: 0;
+            background-color: rgb(13, 14, 18);
           }
 
           .content {
