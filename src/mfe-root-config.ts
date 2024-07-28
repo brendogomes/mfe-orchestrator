@@ -1,4 +1,4 @@
-import { registerApplication, start, LifeCycles } from "single-spa";
+import { registerApplication, start } from "single-spa";
 
 const mfeApps = [
   {
@@ -10,6 +10,11 @@ const mfeApps = [
     name: '@mfe/topbar',
     activeWhen: location => location.pathname.startsWith('/'),
     domElement: 'topbar'
+  },
+  {
+    name: '@mfe/dashboard',
+    activeWhen: location => location.pathname.startsWith('/'),
+    domElement: 'main'
   }
 ]
 

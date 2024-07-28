@@ -8,12 +8,12 @@
   <title>Root Config</title>
   <script src="https://cdn.jsdelivr.net/npm/regenerator-runtime@0.13.7/runtime.min.js"></script>
   <meta http-equiv="Content-Security-Policy"
-    content="default-src 'self' https: localhost:*; script-src 'unsafe-inline' 'unsafe-eval' https: localhost:*; connect-src https: localhost:* ws://localhost:*; style-src 'unsafe-inline' https:; object-src 'none';">
+    content="default-src 'self' https: localhost:*; script-src 'unsafe-inline' 'unsafe-eval' https: localhost:*; connect-src https: localhost:* ws://localhost:* ws://192.168.1.5:8003/; style-src 'unsafe-inline' https:; object-src 'none';">
   <meta name="importmap-type" content="systemjs-importmap" />
 
   <script type="systemjs-importmap" src="./importmaps/dependencies.json"></script>
 
-  <link rel="preload" href="https://cdn.jsdelivr.net/npm/single-spa@5.9.0/lib/system/single-spa.min.js" as="script">
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/single-spa@5.9.0/lib/system/single-spa.min.js" as="script" crossOrigin="anonymous">
 
   <% if (isLocal) { %>
     <script type="systemjs-importmap" src="./importmaps/local.json"></script>
@@ -25,6 +25,7 @@
         <script src="https://cdn.jsdelivr.net/npm/import-map-overrides@2.2.0/dist/import-map-overrides.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.3/dist/system.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.3/dist/extras/amd.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/systemjs@6.7.0/dist/extras/amd.min.js"></script>
         <style>
           body {
             display: flex;
@@ -52,7 +53,7 @@
   </div>
   <section class="content">
     <header id="topbar"></header>
-    <main id="main">Content</main>
+    <main id="main"></main>
   </section>
 
 
